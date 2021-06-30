@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Fetch Data from DB</title>
+</head>
+<body>
+    <center>
+        <h1>Fetch PostgreSQL data using Django</h1>
+        <hr/>
+        <table border="1">
+            <tr>
+                <th>City</th>
+                <th>County</th>
+                <th>Zip</th>
+                <th>Intersection</th>
+                <th>Ranking</th>
+            </tr>
+            {% for result in data%}
+            <tr> 
+                <td>{{result.City}}</td>
+                <td>{{result.County}}</td>
+                <td>{{result.Zip}}</td>
+                <td>{{result.Intersection}}</td>
+                <td>{{result.Ranking}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
+
